@@ -9,6 +9,7 @@
   "author": "awyaki",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^30.0.1"
+    "electron": "^30.0.1",
+    "prettier": "3.2.5"
   }
 }
