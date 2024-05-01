@@ -4,10 +4,10 @@
   "description": "template for using react, typescript and prisma with sqlite3 on electron",
   "main": "./out/main/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npx electron-vite preview",
     "build": "npx electron-vite build",
-    "pack": "npx electron-vite build && npx electron-builder build",
+    "pack": "npx electron-vite build && npx electron-builder build"
   },
   "author": "awyaki",
   "license": "MIT",
