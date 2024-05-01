@@ -17,5 +17,8 @@
     "globals": "^15.1.0",
     "prettier": "3.2.5",
     "typescript-eslint": "^7.8.0"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.4"
   }
 }
