@@ -2,7 +2,10 @@ import path from "path";
 import { app } from "electron";
 
 export const isDev = !app.isPackaged;
-export const dbPath = path.join(app.getPath("userData"), "your.app.name.db");
+export const dbPath = path.join(
+  app.getPath("userData"),
+  "template-electron-react-sqlite.db",
+);
 // TODO: process.env.DTABASE_URLが存在することを検証するコードをあとで書く。
 // zodやvildbotを使うと良さそう
 export const dbUrl = isDev ? "file:dev.db" : "file:" + dbPath;
