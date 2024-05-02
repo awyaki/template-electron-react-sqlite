@@ -37,5 +37,47 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "sqlite3": "^5.1.7"
+  },
+  "build": {
+    "appId": "com.template-electron-react-sqlite.app",
+    "files": [
+      "out/**/*",
+      "prisma/**/*",
+      "!prisma/dev.db",
+      {
+        "from": "node_modules/.prisma/client/",
+        "to": "node_modules/.prisma/client/"
+      }
+    ],
+    "extraResources": [
+      "node_modules/@prisma/engines/schema-engine*",
+      "node_modules/@prisma/engines/query*",
+      "node_modules/@prisma/engines/libquery*",
+      "node_modules/prisma/build/index.js",
+      "node_modules/prisma/package.json"
+    ],
+    "mac": {
+      "category": "public.app-category.productivity",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        },
+        {
+          "target": "zip",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        }
+      ],
+      "asarUnpack": "prisma"
+    },
+    "directories": {
+      "output": "build"
+    }
   }
 }
