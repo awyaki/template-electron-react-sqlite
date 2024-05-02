@@ -1,7 +1,7 @@
 export const App: React.FC = () => {
   return (
     <main>
-      <h1>This is an example</h1>
+      <h1 css={{ color: "blue" }}>This is an example</h1>
     </main>
   );
 };
