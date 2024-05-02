@@ -2,7 +2,7 @@ import path from "path";
 import { app } from "electron";
 
 export const isDev = !app.isPackaged;
-export const dbPath = path.join(app.getPath("userData"), "llog.db");
+export const dbPath = path.join(app.getPath("userData"), "your.app.name.db");
 // TODO: process.env.DTABASE_URLが存在することを検証するコードをあとで書く。
 // zodやvildbotを使うと良さそう
 export const dbUrl = isDev ? "file:dev.db" : "file:" + dbPath;
@@ -10,7 +10,7 @@ export const dbUrl = isDev ? "file:dev.db" : "file:" + dbPath;
 process.env.DATABASE_URL = dbUrl;
 
 // CAUTION: マイグレーションを行う度に最新のマイグレーションの名前に変更すること
-export const latestMigration = "";
+export const latestMigration = "20240502004338_init";
 
 const electronPlatFormName = {
   win32: "win32",
